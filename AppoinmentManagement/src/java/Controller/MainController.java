@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -51,6 +52,8 @@ public class MainController extends HttpServlet {
             }
             
             AppointmentDAO daoApp = new AppointmentDAO();
+            List<AppointmentDTO> listAP = daoApp.list();
+            request.setAttribute("LISTAPP", listAP);
 
             if (action.equals("login")) {
                 String account = request.getParameter("account");
