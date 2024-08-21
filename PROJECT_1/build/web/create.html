@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Create Page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- font awesome cdn link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        
+        <!-- custom css file link -->
+        <link rel="stylesheet" href="css/components.css">
+            
+    </head>
+    <body>
+        <section class="form-container">
+            
+            <form action="MainController" method="POST">
+                <h3>register now</h3>
+                <span>UserID</span>
+                <input type="text" name="userID" class="box" placeholder="enter your ID" required="" />
+                </br><span>Fullname<span>
+                <input type="text" name="fullName" class="box" placeholder="enter your name" required="" />
+                </br><span>Role ID</span>
+                <select>
+                    <option value="US">US</option>
+                    <option value="AD">AD</option>
+                </select>
+                </br><span>Password</span>
+                <input type="password" name="password" class="box" placeholder="enter your password" required="" />
+                </br><span>Confirm</span>
+                <input type="password" name="confirm" class="box" placeholder="confirm your pasword" required="" />
+                </br>
+                <input type="submit" name="action" class="btn" value="Create" />
+                
+                <p>already have an account? <a href="login.jsp">login now</p>
+            </form>
+
+        </section>
+    </body>
+</html>
